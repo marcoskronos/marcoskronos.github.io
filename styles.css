@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif; /* Usando Montserrat como fonte principal */
 }
 
 .hero {
@@ -14,7 +14,7 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 100vh;
-    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    background: linear-gradient(135deg, #1e3a8a 0%, #2b4db8 100%); /* Gradiente mais suave */
     padding: 40px;
     color: white;
     overflow: hidden;
@@ -25,33 +25,36 @@ body {
     top: 20px;
     left: 20px;
     font-size: 40px;
-    font-weight: bold;
+    font-weight: 700;
     color: white;
 }
 
 .content {
-    max-width: 50%;
+    max-width: 40%; /* Reduzindo a largura pra ficar mais compacto */
+    margin-left: 50px; /* Ajustando o espaço à esquerda */
 }
 
 .content h1 {
-    font-size: 36px;
-    line-height: 1.2;
+    font-size: 40px; /* Aumentando o tamanho do título */
+    line-height: 1.1; /* Reduzindo o espaçamento entre linhas */
     margin-bottom: 20px;
     text-transform: uppercase;
+    font-weight: 700; /* Peso mais forte pra o título */
 }
 
 .content p {
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 16px; /* Ajustando o tamanho do subtítulo */
+    line-height: 1.4; /* Reduzindo o espaçamento entre linhas */
     margin-bottom: 30px;
+    font-weight: 400;
 }
 
 .content button {
     background-color: #00b7eb;
     color: white;
     border: none;
-    padding: 15px 30px;
-    font-size: 18px;
+    padding: 15px 40px; /* Aumentando o padding pra o botão ficar maior */
+    font-size: 20px; /* Aumentando o tamanho do texto do botão */
     text-transform: uppercase;
     border-radius: 5px;
     cursor: pointer;
@@ -63,7 +66,7 @@ body {
 }
 
 .image-placeholder {
-    max-width: 40%;
+    max-width: 50%; /* Aumentando a proporção da imagem */
 }
 
 .image-placeholder img {
@@ -81,13 +84,56 @@ body {
     justify-content: center;
     width: 120px;
     height: 120px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo mais translúcido */
     border-radius: 50%;
-    border: 2px solid white;
+    border: 1px solid white; /* Borda mais fina */
     flex-direction: column;
     text-align: center;
 }
 
 .badge-text {
     font-size: 12px;
-    text...
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.badge-letter {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .content {
+        max-width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .content h1 {
+        font-size: 28px; /* Ajustando o tamanho do título em telas menores */
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .content button {
+        padding: 12px 30px;
+        font-size: 18px;
+    }
+
+    .image-placeholder {
+        max-width: 80%;
+    }
+
+    .badge {
+        width: 100px;
+        height: 100px;
+    }
+}
